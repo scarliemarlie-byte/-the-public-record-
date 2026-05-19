@@ -23,6 +23,12 @@
       "opinion":    "Opinion"
     })[slug] || slug;
   }
+function getImagePath(image) {
+  if (!image) return "";
+  if (image.startsWith("http")) return image;
+  if (image.startsWith("/")) return image;
+  return "/assets/img/" + image;
+}
 
   function formatDate(iso) {
     try {
@@ -89,7 +95,7 @@
       cat === "weird-news" ? "kicker--gold" :
       cat === "internet" ? "kicker--green" : "";
     const mediaStyle = article.image
-      ? ' style="background-image:url(' + encodeURI(article.image) + ');background-size:cover;background-position:center;"'
+      ? ' style="background-image:url(' + encodeURI(getImagePath(article.image)) + ');background-size:cover;background-position:center;"'
       : "";
 
     return (
@@ -121,7 +127,7 @@
 
     const leadHref = "article.html?slug=" + encodeURIComponent(lead.slug);
     const heroStyle = lead.image
-      ? ' style="background-image:url(' + encodeURI(lead.image) + ');background-size:cover;background-position:center;"'
+      ? ' style="background-image:url(' + encodeURI(getImagePath(lead.image)) + ');background-size:cover;background-position:center;"'
       : "";
 
     hero.innerHTML =
@@ -304,7 +310,7 @@
 
     const heroEl = root.querySelector("[data-article-hero]");
     if (heroEl && article.image) {
-      heroEl.style.backgroundImage = "url(" + article.image + ")";
+      heroEl.style.backgroundImage = 'url("' + encodeURI(getImagePath(article.image)) + '")';
       heroEl.style.backgroundSize = "cover";
       heroEl.style.backgroundPosition = "center";
     }
