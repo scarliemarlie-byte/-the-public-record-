@@ -1,0 +1,30 @@
+# Netlify build + serving configuration for The Public Record.
+# No build step is required — Netlify just publishes the repo root as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+# Send the bare /admin path to /admin/ so the CMS shell loads
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+  force = true
+
+# Standard SPA-style 200 for the admin app — keeps deep links working
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Long cache on hashed-ish static assets; the HTML is always fresh
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
