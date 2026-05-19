@@ -13,7 +13,7 @@ collections:
     files:
       - name: "articles"
         label: "Articles"
-      file: "the-public-record 7/assets/data/articles.json"
+        file: "the-public-record 7/assets/data/articles.json"
         format: "json"
         editor:
           preview: false
@@ -23,23 +23,23 @@ collections:
             widget: "list"
             summary: "{{fields.title}} — {{fields.author}}"
             fields:
-              - { label: "Slug (URL part, lowercase, hyphens)", name: "slug", widget: "string", hint: "Example: mayor-renames-times-square" }
-              - { label: "Headline", name: "title", widget: "string" }
-              - { label: "Deck (one-sentence subtitle)", name: "deck", widget: "string", required: false }
+              - {label: "Slug (URL part, lowercase, hyphens)", name: "slug", widget: "string", hint: "Example: mayor-renames-times-square"}
+              - {label: "Headline", name: "title", widget: "string"}
+              - {label: "Deck (one-sentence subtitle)", name: "deck", widget: "string", required: false}
               - label: "Section"
                 name: "category"
                 widget: "select"
                 options:
-                  - { label: "Politics",   value: "politics" }
-                  - { label: "Culture",    value: "culture" }
-                  - { label: "Weird News", value: "weird-news" }
-                  - { label: "Internet",   value: "internet" }
-                  - { label: "Lifestyle",  value: "lifestyle" }
-                  - { label: "Opinion",    value: "opinion" }
-              - { label: "Author / Byline", name: "author", widget: "string" }
-              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
-              - { label: "Read time", name: "readTime", widget: "string", required: false, hint: "e.g. 5 min" }
-              - { label: "Hero image", name: "image", widget: "image", required: false, allow_multiple: false }
-              - { label: "Excerpt (1 short paragraph, shows on cards)", name: "excerpt", widget: "text" }
-              - { label: "Lead story on homepage?", name: "featured", widget: "boolean", default: false, hint: "Flag one article. The most recent flagged article wins." }
-              - { label: "Article body", name: "body", widget: "markdown", hint: "Write the full article here." }
+                  - {label: "Politics", value: "politics"}
+                  - {label: "Culture", value: "culture"}
+                  - {label: "Weird News", value: "weird-news"}
+                  - {label: "Internet", value: "internet"}
+                  - {label: "Lifestyle", value: "lifestyle"}
+                  - {label: "Opinion", value: "opinion"}
+              - {label: "Author / Byline", name: "author", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false}
+              - {label: "Read time", name: "readTime", widget: "string", required: false, hint: "e.g. 5 min"}
+              - {label: "Hero image", name: "image", widget: "image", required: false, allow_multiple: false}
+              - {label: "Excerpt (1 short paragraph, shows on cards)", name: "excerpt", widget: "text"}
+              - {label: "Lead story on homepage?", name: "featured", widget: "boolean", default: false, hint: "Flag one article. Most recent flagged article wins."}
+              - {label: "Article body", name: "body", widget: "markdown", hint: "Write the full article here."}
