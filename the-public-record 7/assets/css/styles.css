@@ -225,16 +225,19 @@ button { font-family: inherit; cursor: pointer; }
    ----------------------------------------------------------- */
 .hero {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--space-6);
   align-items: stretch;
   padding: var(--space-7) 0 var(--space-6);
   border-bottom: 1px solid var(--rule);
 }
 .hero__media {
-  position: relative;
+  width: 100%;
+  min-width: 0;
   aspect-ratio: 16 / 10;
   background: linear-gradient(135deg, #d8d2c2, #b9b1a0);
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 .hero__media::after {
@@ -250,7 +253,12 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.18em;
   padding: 4px 36px;
 }
-.hero__body { display: flex; flex-direction: column; justify-content: center; }
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
 .hero__title {
   font-family: var(--serif-display);
   font-weight: 700;
