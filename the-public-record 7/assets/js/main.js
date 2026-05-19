@@ -48,17 +48,24 @@ function getImagePath(image) {
   }
 
   function renderMarkdown(md) {
-    if (!md) return "";
-    if (window.marked && typeof window.marked.parse === "function") {
-      // marked v4+
-      window.marked.setOptions({ gfm: true, breaks: false });
-      return window.marked.parse(md).replace(/src="(?!https?:\/\/|\/)([^"]+)"/g, 'src="/assets/img/$1"');
-    }
-    // Fallback: very minimal paragraph conversion if marked failed to load
-    return md.split(/\n{2,}/).map(function (p) {
-      return "<p>" + escapeHtml(p).replace(/\n/g, "<br>") + "</p>";
-    }).join("");
+  if (!md) return "";
+
+  md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, function (_, alt, src) {
+    src = src.trim();
+    return '<img src="' + encodeURI(getImagePath(src)) + '" alt="' + escapeHtml(alt || "") + '">';
+  });
+
+  if (window.marked && typeof window.marked.parse === "function") {
+    // marked v4+
+    window.marked.setOptions({ gfm: true, breaks: false });
+    return window.marked.parse(md);
   }
+
+  // Fallback: very minimal paragraph conversion if marked failed to load
+  return md.split(/\n{2,}/).map(function (p) {
+    return "<p>" + escapeHtml(p).replace(/\n/g, "<br>") + "</p>";
+  }).join("");
+}
 
   /* ----------------------------------------------------------
      Dateline + mobile nav
