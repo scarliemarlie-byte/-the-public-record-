@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/img"
+media_folder: "the-public-record 7/assets/img"
 public_folder: "/assets/img"
 
 site_url: /
@@ -13,7 +13,7 @@ collections:
     files:
       - name: "articles"
         label: "Articles"
-        file: "assets/data/articles.json"
+      file: "the-public-record 7/assets/data/articles.json"
         format: "json"
         editor:
           preview: false
