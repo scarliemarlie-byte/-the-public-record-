@@ -52,7 +52,7 @@ function getImagePath(image) {
     if (window.marked && typeof window.marked.parse === "function") {
       // marked v4+
       window.marked.setOptions({ gfm: true, breaks: false });
-      return window.marked.parse(md);
+      return window.marked.parse(md).replace(/src="(?!https?:\/\/|\/)([^"]+)"/g, 'src="/assets/img/$1"');
     }
     // Fallback: very minimal paragraph conversion if marked failed to load
     return md.split(/\n{2,}/).map(function (p) {
