@@ -23,7 +23,7 @@
       "featured": false,
       "date": "2026-05-16",
       "title": "Kegel USA” Set to Take Over NYC Armory in One of the Strangest Competitions on Record",
-      "image": "kegel-championship.jpg",
+      "image": "/assets/img/kegel-championship.jpg",
       "category": "weird-news"
     },
     {
@@ -36,7 +36,7 @@
       "featured": false,
       "date": "2026-05-15",
       "title": "Trump Downplays China Trip, Calls It “Basically a Short Holiday With CEOs”",
-      "image": "trump-china.jpg",
+      "image": "/assets/img/trump-china.jpg",
       "category": "politics"
     },
     {
@@ -49,7 +49,7 @@
       "featured": false,
       "date": "2026-05-14",
       "title": "Inside “BabyMaxxing,” Fashion’s Most Unsettling New Youth Aesthetic",
-      "image": "baby-max.jpg",
+      "image": "/assets/img/baby-max.jpg",
       "category": "culture"
     },
     {
@@ -62,7 +62,7 @@
       "featured": false,
       "date": "2026-05-13",
       "title": "Joe Rogan’s Latest Health Hack? 18 Ounces of Breastmilk a Day!",
-      "image": "joe-breast-milk.jpg",
+      "image": "/assets/img/joe-breast-milk.jpg",
       "category": "lifestyle"
     },
     {
@@ -75,7 +75,7 @@
       "featured": false,
       "date": "2026-05-12",
       "title": "Trump Brings “Clavicular” to China in Bizarre Rare Earth Negotiation",
-      "image": "china-clav.jpg",
+      "image": "/assets/img/china-clav.jpg",
       "category": "politics"
     },
     {
@@ -88,7 +88,7 @@
       "featured": false,
       "date": "2026-05-11",
       "title": "A Theme Park Like No Other",
-      "image": "narco-land.jpg",
+      "image": "/assets/img/narco-land.jpg",
       "category": "lifestyle"
     },
     {
@@ -101,7 +101,7 @@
       "featured": false,
       "date": "2026-05-18",
       "title": "In Rare Diplomatic Pivot Trump Offers “Unprecedented Cultural Gesture” to China",
-      "image": "china-toes.jpg",
+      "image": "/assets/img/china-toes.jpg",
       "category": "politics"
     },
     {
@@ -114,7 +114,7 @@
       "featured": false,
       "date": "2026-05-20",
       "title": "After Six Years in Isolation, Brooklyn Man Steps Outside for the First Time",
-      "image": "brookyln-man.jpg",
+      "image": "/assets/img/brookyln-man.jpg",
       "category": "weird-news"
     },
     {
@@ -127,7 +127,7 @@
       "featured": false,
       "date": "2026-05-12",
       "title": "Trump’s Unlikely War on Crimes That Haven't Happened Yet",
-      "image": "time-team.jpg",
+      "image": "/assets/img/time-team.jpg",
       "category": "opinion"
     },
     {
@@ -140,7 +140,7 @@
       "featured": false,
       "date": "2026-05-20",
       "title": "Reading Towards Peace - Inside a Book Club for Gang Members",
-      "image": "reading-gang.jpg",
+      "image": "/assets/img/reading-gang.jpg",
       "category": "culture"
     },
     {
@@ -153,7 +153,7 @@
       "featured": false,
       "date": "2026-05-20",
       "title": "NYC Man Arrested After “Biological Event” in Midtown Elevator",
-      "image": "bio-arrest.jpg",
+      "image": "/assets/img/bio-arrest.jpg",
       "category": "weird-news"
     },
     {
@@ -166,7 +166,7 @@
       "featured": false,
       "date": "2026-05-18",
       "title": "iMac Files Sexual Assault Charges Against Owner Sparking #Computemetoo Movement",
-      "image": "imac-assualt.jpg",
+      "image": "/assets/img/imac-assualt.jpg",
       "category": "culture"
     },
     {
@@ -179,7 +179,7 @@
       "featured": false,
       "date": "2026-05-17",
       "title": "Australian Scientists Claim They Have Finally Solved the Mystery of Why Kangaroos Have Multiple Vaginas",
-      "image": "kang-vag.jpg",
+      "image": "/assets/img/kang-vag.jpg",
       "category": "weird-news"
     },
     {
@@ -192,7 +192,7 @@
       "featured": false,
       "date": "2026-05-17",
       "title": "The Strange Rise of “Nursery Parenting”Why a growing number of parents are allowing their children to raise them.",
-      "image": "nursery-parent.jpg",
+      "image": "/assets/img/nursery-parent.jpg",
       "category": "lifestyle"
     },
     {
@@ -205,7 +205,7 @@
       "featured": false,
       "date": "2026-05-18",
       "title": "Cat Stevens Rebrands Again, Announces He Will Now Be Known as “Moroni Stevens” Following Sudden Conversion to Mormonism",
-      "image": "cat-steven.jpg",
+      "image": "/assets/img/cat-steven.jpg",
       "category": "weird-news"
     },
     {
@@ -218,7 +218,7 @@
       "featured": false,
       "date": "2026-05-19",
       "title": "“Nails, Not Bail”: Hegseth Floats ‘Biblical Deterrence’ Strategy for Crime Surge",
-      "image": "nails-not-bail.jpg",
+      "image": "/assets/img/nails-not-bail.jpg",
       "category": "lifestyle"
     },
     {
@@ -231,7 +231,7 @@
       "featured": true,
       "date": "2026-05-12",
       "title": "‘Patriot Pricing’ Takes Hold as Devoted Supporters Pay More on Purpose",
-      "image": "patriot-pricing.jpg",
+      "image": "/assets/img/patriot-pricing.jpg",
       "category": "politics"
     },
     {
@@ -244,8 +244,19 @@
       "featured": false,
       "date": "2026-05-19",
       "title": "Chef Sparks Controversy With “Pre-Chewed” Michelin Dining Experience",
-      "image": "screenshot-2026-05-19-at-2.49.37-pm.png",
+      "image": "/assets/img/screenshot-2026-05-19-at-2.49.37-pm.png",
       "category": "culture"
+    },
+    {
+      "excerpt": "In a stunning and unusually harmonious moment on Capitol Hill, Congress announced late Tuesday that it has reached a bipartisan agreement on a new border enforcement bill—one that both increases funding for ICE while simultaneously banning the use of face coverings by its agents.\nThe compromise?\n",
+      "body": "\n\n\n**In a stunning and unusually harmonious moment on Capitol Hill, Congress announced late Tuesday that it has reached a bipartisan agreement on a new border enforcement bill—one that both increases funding for ICE while simultaneously banning the use of face coverings by its agents.**\n\n\n**The compromise?**\n\n\n**Agents will now be required to wear novelty disguise glasses featuring attached fake noses and mustaches while conducting operations.**\n\n\n**Lawmakers from both sides of the aisle hailed the agreement as a “creative and balanced solution” to ongoing concerns about accountability and public perception.**\n\n\n**“For too long, masks have created a sense of fear and anonymity,” said one senior legislator. “This approach preserves a degree of privacy for agents while introducing… a softer visual presence.”**\n\n\n**Under the new guidelines, ICE agents will be issued government-standard disguise kits, described in the bill as “Class B Facial Obfuscation Devices.” Early prototypes reportedly include a range of mustache styles, from “Subtle Accountant” to “Full Carnival.”**\n\n\n**Supporters argue the change will reduce tension during enforcement actions.**\n\n\n**“There’s something inherently less threatening about a man in wraparound Oakleys with a rubber nose,” said one congressional aide familiar with the negotiations. “It signals authority—but also approachability.”**\n\n\n**One official involved in drafting the bill put it more bluntly:**\n\n\n**“We want our image to be one of both authority and amusement,” the official said. “At the end of the day, we want people to leave the country with a smile on their face.”**\n\n\n**Not everyone is convinced.**\n\n\n**Critics have questioned whether the policy will undermine the seriousness of federal operations, with one former official noting, “It’s hard to project command presence when you look like you just left a costume party.”**\n\n\n**Still, the bill passed with overwhelming support, with several lawmakers praising it as proof that compromise is still possible in Washington.**\n\n\n**“This is what the American people want,” one representative said. “Strong borders, accountable enforcement, and, where possible, a light touch of whimsy.”**\n\n\n**Implementation is expected to begin immediately, with bulk orders of disguise glasses already underway.**\n\n\n**The policy has already had unexpected economic effects. Party City, which had seen stores shuttered in recent years, is reportedly experiencing a surge in bulk orders, with suppliers scrambling to meet what one analyst described as “federal-level demand for novelty facial accessories.”**\n\n\n**At press time, multiple agents were reportedly seen practicing maintaining composure while wearing the devices, though sources say “several broke character**",
+      "readTime": "5 min",
+      "author": "Asaul Tanbattery",
+      "slug": "Congress-Reaches-ICE-Deal",
+      "featured": false,
+      "date": "2026-05-20",
+      "title": "Congress Reaches Rare Bipartisan Deal on Border Enforcement—Agents to Swap Masks for Fake Mustaches",
+      "category": "politics"
     }
   ]
 }
