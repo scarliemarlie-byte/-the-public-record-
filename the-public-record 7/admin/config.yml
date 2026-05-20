@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: admin-image-fix-test
+  branch: main
 
 slug:
   encoding: "ascii"
