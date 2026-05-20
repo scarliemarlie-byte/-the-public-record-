@@ -1,0 +1,41 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-size: 16px !important;
+}
+
+button,
+[role="button"],
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  [class*="EditorControlBar"],
+  [class*="Toolbar"] {
+    flex-wrap: wrap;
+  }
+
+  [class*="EditorControlBar"] button,
+  [class*="Toolbar"] button {
+    margin-bottom: 6px;
+  }
+
+  [class*="ControlPane"],
+  [class*="EditorContainer"],
+  [class*="CollectionContainer"] {
+    max-width: 100vw !important;
+  }
+}
