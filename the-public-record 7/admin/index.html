@@ -4,14 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Editor — The Public Record</title>
-  <!-- Identity widget powers email + GitHub login -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS (formerly Netlify CMS) admin shell -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // After a user accepts the email invite, redirect them straight into the admin
+    var BUILD_HOOK = "https://api.netlify.com/build_hooks/6a0d02427f1d135f44168222";
+
+    function triggerBuild() {
+      fetch(BUILD_HOOK, { method: "POST" })
+        .then(function () { console.log("Netlify build triggered."); })
+        .catch(function (e) { console.error("Build trigger failed:", e); });
+    }
+
+    if (window.CMS) {
+      CMS.registerEventListener({ name: "postPublish", handler: triggerBuild });
+      CMS.registerEventListener({ name: "postSave", handler: triggerBuild });
+    }
+
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function (user) {
         if (!user) {
