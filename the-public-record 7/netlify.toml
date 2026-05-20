@@ -1,7 +1,7 @@
 [build]
   publish = "."
   command = ""
-
+  ignore = "exit 1"
 [[headers]]
   for = "/assets/*"
   [headers.values]
