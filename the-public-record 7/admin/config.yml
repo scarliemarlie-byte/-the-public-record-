@@ -1,6 +1,11 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: admin-image-fix-test
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
 
 media_folder: "the-public-record 7/assets/img"
 public_folder: "/assets/img"
@@ -39,7 +44,13 @@ collections:
               - {label: "Author / Byline", name: "author", widget: "string"}
               - {label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false}
               - {label: "Read time", name: "readTime", widget: "string", required: false, hint: "e.g. 5 min"}
-              - {label: "Hero image", name: "image", widget: "image", required: false, allow_multiple: false}
+              - label: "Hero image"
+                name: "image"
+                widget: "image"
+                required: false
+                allow_multiple: false
+                choose_url: false
+                hint: "Tap Choose image, upload the photo, then select it. The editor will save a clean image path automatically."
               - {label: "Excerpt (1 short paragraph, shows on cards)", name: "excerpt", widget: "text"}
               - {label: "Lead story on homepage?", name: "featured", widget: "boolean", default: false, hint: "Flag one article. Most recent flagged article wins."}
               - {label: "Article body", name: "body", widget: "markdown", hint: "Write the full article here."}

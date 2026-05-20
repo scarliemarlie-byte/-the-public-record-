@@ -23,12 +23,35 @@
       "opinion":    "Opinion"
     })[slug] || slug;
   }
-function getImagePath(image) {
-  if (!image) return "";
-  if (image.startsWith("http")) return image;
-  if (image.startsWith("/")) return image;
-  return "/assets/img/" + image;
-}
+  function getImagePath(image) {
+    if (!image) return "";
+
+    let src = String(image).trim().replace(/^['"]|['"]$/g, "").replace(/\\/g, "/");
+    if (!src) return "";
+    if (/^(https?:|data:|blob:)/i.test(src)) return src;
+
+    const absoluteAssets = "/assets/img/";
+    const relativeAssets = "assets/img/";
+    let index = src.indexOf(absoluteAssets);
+    if (index > -1) return src.slice(index);
+
+    index = src.indexOf(relativeAssets);
+    if (index > -1) return "/" + src.slice(index);
+
+    if (src.startsWith("/")) return src;
+    return absoluteAssets + src.replace(/^\/+/, "");
+  }
+
+  function markdownImageSrc(raw) {
+    let src = String(raw || "").trim();
+    if (!src) return "";
+
+    const wrapped = src.match(/^<([^>]+)>/);
+    if (wrapped) return wrapped[1].trim();
+
+    // Strip optional Markdown image titles: ![](photo.jpg "Caption")
+    return src.replace(/\s+(['"]).*\1\s*$/, "").trim();
+  }
 
   function formatDate(iso) {
     try {
@@ -51,7 +74,7 @@ function getImagePath(image) {
   if (!md) return "";
 
   md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, function (_, alt, src) {
-    src = src.trim();
+    src = markdownImageSrc(src);
     return '<img src="' + encodeURI(getImagePath(src)) + '" alt="' + escapeHtml(alt || "") + '">';
   });
 
